@@ -1,4 +1,13 @@
 name: workflow.yml
-on:
-
+on: workflow_dispatch
 jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run first script
+        run: |
+          echo "Running first script"
+          
